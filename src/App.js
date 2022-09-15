@@ -1,4 +1,5 @@
 import './App.css';
+import Planetas from './components/Planetas'
 import sol from './images/sol.png'
 import mercurio from './images/mercurio.png'
 import venus from './images/venus.png'
@@ -12,7 +13,7 @@ import netuno from './images/netuno.png'
 function App() {
   return (
     <div>
-     
+      
     </div>
   );
 }
