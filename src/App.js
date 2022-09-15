@@ -13,7 +13,7 @@ import netuno from './images/netuno.png'
 function App() {
   return (
     <div className='App'>
-      <Planetas classes={"planeta"} planeta={sol}/>
+      
     </div>
   );
 }

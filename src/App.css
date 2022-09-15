@@ -1,10 +1,49 @@
+:root{
+  --lento: 0.5;
+  --normal: 1;
+  --rapido: 2;
+  --mais-rapido: 3;
+  --velocidade: var(--normal);
+}
+
 .App {
   text-align: center;
 }
 
+/*  Classe geral para os planetas (sim,eu sei que o sol é uma estrela =) )*/
 .planeta{
   position: absolute;
   top: 40%;
-  width: 110px;
+  width: 50px;
 }
 
+/* Classes especificas */
+/* 365 dias equivalem a 10 segundos */
+/* os segundos dos outros planetas foram achados com uma simples regra de três */
+.mercurio{
+  animation: mercurio calc(2.42s/var(--velocidade)) linear infinite;
+}
+.venus{
+  animation: venus calc(6.16s/var(--velocidade)) linear infinite;
+}
+.terra{
+  animation: terra calc(10s/var(--velocidade)) linear infinite;
+}
+.marte{
+  animation: terra calc(18.82s/var(--velocidade)) linear infinite;
+}
+.jupiter{
+  animation: terra calc(118.68s/var(--velocidade)) linear infinite;
+}
+.saturno{
+  animation: terra calc(294.79s/var(--velocidade)) linear infinite;
+}
+.urano{
+  animation: terra calc(840.58s/var(--velocidade)) linear infinite;
+}
+.netuno{
+  animation: terra calc(1649.04s/var(--velocidade)) linear infinite;
+}
+
+
+/*  Keyframes */
