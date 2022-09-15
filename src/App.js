@@ -13,7 +13,15 @@ import netuno from './images/netuno.png'
 function App() {
   return (
     <div className='App'>
-      
+      <Planetas classes={"planeta"} planeta={sol}/>
+      <Planetas classes={"planeta mercurio"} planeta={mercurio}/>
+      <Planetas classes={"planeta venus"} planeta={venus}/>
+      <Planetas classes={"planeta terra"} planeta={terra}/>
+      <Planetas classes={"planeta marte"} planeta={marte}/>
+      <Planetas classes={"planeta jupiter"} planeta={jupiter}/>
+      <Planetas classes={"planeta saturno"} planeta={saturno}/>
+      <Planetas classes={"planeta urano"} planeta={urano}/>
+      <Planetas classes={"planeta netuno"} planeta={netuno}/>
     </div>
   );
 }
