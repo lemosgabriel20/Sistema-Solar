@@ -2,8 +2,10 @@
   --lento: 0.5;
   --normal: 1;
   --rapido: 2;
-  --mais-rapido: 3;
+  --mais-rapido: 31;
   --velocidade: var(--normal);
+  
+  --offset: 75;
 }
 
 .App {
@@ -14,35 +16,90 @@
 .planeta{
   position: absolute;
   top: 40%;
-  width: 50px;
+}
+.sol {
+  position: absolute;
+  width: 25px;
 }
 
 /* Classes específicas */
 /* 365 dias equivalem a 10 segundos */
 /* os segundos dos outros planetas foram achados com uma simples regra de três */
+/* 6378km o raio da terra equivale a 50px
+ os outros raios foram achados com uma regra de três*/
 .mercurio{
+  width: 10px;
   animation: mercurio calc(2.42s/var(--velocidade)) linear infinite;
 }
 .venus{
+  width:25px;
   animation: venus calc(6.16s/var(--velocidade)) linear infinite;
 }
 .terra{
+  width: 35px;
   animation: terra calc(10s/var(--velocidade)) linear infinite;
 }
 .marte{
+  width: 20px;
   animation: marte calc(18.82s/var(--velocidade)) linear infinite;
 }
 .jupiter{
+  width: 80px;
   animation: jupiter calc(118.68s/var(--velocidade)) linear infinite;
 }
 .saturno{
+  width: 70px;
   animation: saturno calc(294.79s/var(--velocidade)) linear infinite;
 }
 .urano{
+  width: 65px;
   animation: urano calc(840.58s/var(--velocidade)) linear infinite;
 }
 .netuno{
+  width: 60px;
   animation: netuno calc(1649.04s/var(--velocidade)) linear infinite;
 }
 
 /*  Keyframes */
+
+/* A distância entre a terra e o sol é de aproximadamente
+149.600.000km , aqui ficou representado como 150px, todas as demais distâncias são encontradas por uma regra de três*/
+@keyframes mercurio {
+  from { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+}
+
+@keyframes venus {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+@keyframes terra {
+  from { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(110px) rotate(-360deg); }
+}
+
+@keyframes marte {
+  from { transform: rotate(0deg) translateX(175px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(175px) rotate(-360deg); }
+}
+
+@keyframes jupiter {
+  from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+
+@keyframes saturno {
+  from { transform: rotate(0deg) translateX(380px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(380px) rotate(-360deg); }
+}
+
+@keyframes urano {
+  from { transform: rotate(0deg) translateX(440px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(440px) rotate(-360deg); }
+}
+
+@keyframes netuno {
+  from { transform: rotate(0deg) translateX(500px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(500px) rotate(-360deg); }
+}/*4516.34px*/
